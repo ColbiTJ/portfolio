@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspiring Cloud Practitioner Portfolio</title>
+    <link rel="stylesheet" href="aboutme.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-title">Colbi Johnson | Portfolio</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <img src="profile pic.JPG" alt="Your Photo">
+        <h2>About Me</h2>
+        <p>
+            Hello! My name is <strong>Colbi Johnson</strong>, and I’m an aspiring AWS Cloud Practitioner passionate about leveraging cloud technologies to build scalable and innovative solutions. 
+            I enjoy learning, problem-solving, and applying AWS services to real-world challenges.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Here are some of the tools and technologies I work with:</p>
+        <div class="skills-container">
+            <!-- Skill Card 1 -->
+            <div class="skill-card">
+                <img src="Simple Storage Service.png" alt="AWS">
+                <p>AWS</p>
+            </div>
+            <!-- Skill Card 2 -->
+            <div class="skill-card">
+                <img src="python_icon.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <!-- Skill Card 3 -->
+            <div class="skill-card">
+                <img src="CloudFormation.png" alt="CloudFormation">
+                <p>CloudFormation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Static Website Hosting:</strong> Hosted a static website on Amazon S3 with a custom domain and SSL.</li>
+            <li><strong>Serverless Application:</strong> Built a contact form using AWS Lambda, API Gateway, and DynamoDB.</li>
+            <li><strong>CloudFormation Template:</strong> Automated the deployment of a multi-tier application.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm" action="https://otlqc8wh02.execute-api.us-east-1.amazonaws.com/prod/submit" method="POST">
+
+            <label for="name">Name:</label>
+    
+            <input type="text" id="name" name="name" required>
+    
+            
+    
+            <label for="email">Email:</label>
+    
+            <input type="email" id="email" name="email" required>
+    
+            
+    
+            <label for="message">Message:</label>
+    
+            <textarea id="message" name="message" required></textarea>
+    
+            
+    
+            <button type="submit">Submit</button>
+    
+        </form>
+        <p>Email: <a href="mailto:johnsoncolbi05@gmail.com">johnsoncolbi05@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/colbijohnson" target="_blank">linkedin.com/in/colbijohnson</a></p>
+        <p>GitHub: <a href="https://github.com/colbitj" target="_blank">github.com/colbitj</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Colbi Johnson. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
