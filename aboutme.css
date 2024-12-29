@@ -131,54 +131,135 @@ body {
     color: #333;
 }
 
-/* Projects Section */
+/* General styling for the project section */
 #projects {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  /* Card container for 3D flip */
+  .project-card {
+    position: relative;
+    width: 300px; /* Adjust width */
+    height: 400px; /* Adjust height */
+    perspective: 1000px; /* Enables 3D perspective */
+    margin: 20px auto;
+  }
+  
+  .project-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .project-card:hover .project-card-inner,
+  .project-card.flipped .project-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Front and Back sides of the card */
+  .project-card-front,
+  .project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Front card styling */
+  .project-card-front {
     background-color: #fff;
+  }
+  
+  .project-card-front h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .project-card-front p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .project-card-front button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .project-card-front button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Back card styling */
+  .project-card-back {
+    background-color: #f4f4f4;
+    transform: rotateY(180deg);
+  }
+  
+  .project-card-back h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .project-card-back .tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .project-card-back .tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .project-card-back .tool img {
+    width: 50px; /* Adjust icon size */
+    height: 50px;
+    margin-bottom: 5px;
+  }
+  
+  .project-card-back .tool span {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  /* Media query to disable hover flip on mobile devices */
+  @media (hover: none) {
+    .project-card:hover .project-card-inner{
+        transform: none;
+    }
+  }
+
+  #contact {
+    background-color: #333; /* Black background */
+    color: #fff; /* White text */
     padding: 40px 20px;
     text-align: center;
 }
 
-#projects h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#projects ul {
-    list-style-type: none;
-    padding: 0;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-#projects ul li {
-    margin-bottom: 15px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-#contact {
-   background-color: #333; /* Black background */
-   color: #fff; /* White text */
-   padding: 40px 20px;
-   text-align: center;
-}
-
 #contact a {
-   color: #ff5722; /* Bright orange link color */
-   text-decoration: none;
+    color: #ff5722; /* Bright orange link color */
+    text-decoration: none;
 }
 
 #contact a:hover {
-   text-decoration: underline;
-   color: #fff; /* Change to white on hover */
-}
-footer {
-   background-color: #ff5722; /* orange background*/
-   color: #fff; /*white text*/
-   text-align: center;
-   padding: 10px 0;
-   font-size: 14px;
-   margin-top: 20px;
+    text-decoration: underline;
+    color: #fff; /* Change to white on hover */
 }
