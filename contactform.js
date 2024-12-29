@@ -52,3 +52,17 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
 });
 
+// JavaScript for flipping project cards
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all the buttons labeled as "Tools"
+    const flipButtons = document.querySelectorAll(".tools-button");
+  
+    // Add click event listener to each button
+    flipButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".project-card");
+        card.classList.toggle("flipped");
+      });
+    });
+  });
+
