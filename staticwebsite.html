@@ -56,16 +56,50 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Static Website Hosting:</strong> Hosted a static website on Amazon S3 with a custom domain and SSL.</li>
-            <li><strong>Serverless Application:</strong> Built a contact form using AWS Lambda, API Gateway, and DynamoDB.</li>
-            <li><strong>CloudFormation Template:</strong> Automated the deployment of a multi-tier application.</li>
-        </ul>
-    </section>
-
+   <!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+        <div class="project-card-inner">
+          <!-- Front Side -->
+          <div class="project-card-front">
+            <h3>Static Website Hosting</h3>
+            <p>
+              Hosted a responsive static website on Amazon S3, integrated with Route 53 for a custom domain, and secured with an SSL certificate.
+            </p>
+            <button onclick="flipCard(this)">Tools</button>
+          </div>
+          <!-- Back Side -->
+          <div class="project-card-back">
+            <h3>Tools Used</h3>
+            <div class="tools">
+              <div class="tool">
+                <img src="aws logo.png" alt="AWS" />
+                <span>AWS</span>
+              </div>
+              <div class="tool">
+                <img src="Simple Storage Service.png" alt="S3" />
+                <span>S3</span>
+              </div>
+              <div class="tool">
+                <img src="Route 53.png" alt="Route 53" />
+                <span>Route 53</span>
+              </div>
+              <div class="tool">
+                <img src="CloudFront.png" alt="CloudFront" />
+                <span>CloudFront</span>
+              </div>
+              <div class="tool">
+                <img src="Certificate Manager.png" alt="ACM" />
+                <span>ACM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact</h2>
@@ -101,6 +135,7 @@
     <footer>
         <p>&copy; 2024 Colbi Johnson. All rights reserved.</p>
     </footer>
+    <script src="contactform.js"></script>
 </body>
 
 </html>
